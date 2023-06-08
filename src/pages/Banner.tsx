@@ -5,7 +5,7 @@ import { AiFillLinkedin } from 'react-icons/ai';
 
 const Banner = () => {
   return (
-    <div className="flex items-center justify-start flex-col h-screen">
+    <div className="flex items-center justify-start flex-col ">
     {/*Profile*/}
     <div className="flex items-center justify-center mt-24">
       <div className="rounded-full border-solid border-4 border-purple-600">
@@ -42,11 +42,11 @@ const Banner = () => {
   </div>
 
       {/*Profile buttons*/}
-      <div className="flex flex-row mt-[38px]">
+      <div className="flex flex-row gap-8 mt-[38px]">
         <a href="#www.google.com" className="bg-purple-500 text-gray-900 py-4 px-10 rounded-md ml-4">
           See my github
         </a>
-        <a href="#contact" className="bg-gray-500 text-gray-400 py-4 px-10 rounded-md ml-4">
+        <a href="#contact" className="bg-fundo-500 text-gray-400 py-4 px-10 rounded-md ml-4">
           See my projects
         </a>
       </div>
