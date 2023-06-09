@@ -12,6 +12,8 @@ import reactIcon from '../assets/react-icon.png';
 import tailwindIcon from '../assets/tailwind-icon.png';
 import trelloIcon from '../assets/trello-icon.png';
 import typescriptIcon from '../assets/typescript-icon.png';
+import rigthArrow from '../assets/rigth-arrow.png';
+import leftArrow from '../assets/left-arrow.png';
 
 const Skills = () => {
   const carouselItems = [
@@ -50,13 +52,13 @@ const Skills = () => {
     </div>
     <div className="flex justify-center items-center space-x-4">
       <button className="text-gray-500" onClick={handlePrevClick}>
-        &lt;
+      <Image src={leftArrow} alt='seta da esquerda' width={20} height={20} />
       </button>
       <div className="flex overflow-hidden space-x-4">
         {carouselItems.slice(currentIndex, currentIndex + numVisibleItems).map(item => (
           <div
             key={item.id}
-            className="w-20 h-20 flex items-center justify-center rounded-full bg-fundo-500 transition-transform duration-500"
+            className="w-20 h-20 flex items-center justify-center rounded-full bg-fundo-500"
             style={{ minWidth: '80px' }}
           >
             <Image src={item.image} alt={item.alt} width={40} height={40} />
@@ -64,7 +66,7 @@ const Skills = () => {
         ))}
       </div>
       <button className="text-gray-500" onClick={handleNextClick}>
-        &gt;
+      <Image src={rigthArrow} alt='seta da direita' width={20} height={20} />
       </button>
     </div>
     </div>
