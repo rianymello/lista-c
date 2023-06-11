@@ -10,7 +10,9 @@ module.exports = {
       colors: {
         fundo: {
           500: '#1C1B1B',
+          700: '#171717',
         },
+        CinzaText: '#A3AABB2',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

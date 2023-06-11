@@ -46,8 +46,8 @@ const Skills = () => {
   };
 
   return (
-    <div className='mt-12'>
-    <div className="text-gray-400 flex justify-center">
+    <div className='mt-20'>
+    <div className="text-gray-400 text-xl flex justify-center">
         <h1>Skills</h1>
     </div>
     <div className="flex justify-center items-center space-x-4">

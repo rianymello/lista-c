@@ -1,15 +1,12 @@
 import '../styles/global.css';
-import Banner from './Banner';
-import Skills from './Skills';
+import Home from './Index';
 
-function MyApp({ Component, pageProps }) {
+const App = () => {
   return (
-    <div>
-      <Banner />
-      <Skills />
-      <Component {...pageProps} />
-    </div>
+    <>
+      <Home />
+    </>
   );
 }
 
-export default MyApp;
+export default App;
