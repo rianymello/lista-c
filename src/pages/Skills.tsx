@@ -9,7 +9,7 @@ import htmlIcon from '../assets/html-icon.png';
 import javascriptIcon from '../assets/javascript-icon.png';
 import miroIcon from '../assets/miro-icon.png';
 import reactIcon from '../assets/react-icon.png';
-import tailwindIcon from '../assets/tailwind-icon.png';
+import tailwindIcon from '../assets/tailwind-icon2.png';
 import trelloIcon from '../assets/trello-icon.png';
 import typescriptIcon from '../assets/typescript-icon.png';
 import rigthArrow from '../assets/rigth-arrow.png';
