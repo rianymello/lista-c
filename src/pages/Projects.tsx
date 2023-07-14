@@ -19,18 +19,6 @@ const Button = ({ label, active, onClick }) => {
   );
 };
 
-const ProjectImages = ({ images }) => {
-  return (
-    <div className="grid grid-cols-2 gap-4 mt-10">
-      {images.map((image, index) => (
-        <div key={index} className="rounded-md overflow-hidden">
-          <Image src={image} alt={`Imagem ${index + 1}`} width={300} height={200} />
-        </div>
-      ))}
-    </div>
-  );
-};
-
 const Projects = () => {
   const [activeButton, setActiveButton] = useState(1);
 
@@ -38,16 +26,36 @@ const Projects = () => {
     setActiveButton(buttonId);
   };
 
+  const project1Images = [
+    Project1,
+    Project2,
+    Project3,
+    Project4,
+    Project5,
+    Project6,
+
+  ];
+
+  const project2Images = [
+    Project6,
+    Project5,
+    Project4,
+    Project3,
+    Project2,
+    Project1,
+
+  ];
+
   const projects = [
     {
       id: 1,
       label: 'Projetos pessoais',
-      images: [Project1, Project2, Project3, Project4, Project5, Project6],
+      images: project1Images,
     },
     {
       id: 2,
       label: 'Projetos escolares',
-      images: [Project6, Project5, Project4, Project3, Project2, Project1],
+      images: project2Images,
     },
   ];
 
@@ -55,7 +63,7 @@ const Projects = () => {
 
   return (
     <div className="flex flex-col items-center justify-center mt-20 mb-12">
-      <div className="space-x-4 bg-fundo-500 w-[25rem] flex justify-center h-16 py-3 rounded-md">
+      <div className="space-x-4 bg-fundo-500 w-96 flex justify-center h-16 py-3 rounded-md">
         {projects.map((project) => (
           <Button
             key={project.id}
@@ -65,8 +73,17 @@ const Projects = () => {
           />
         ))}
       </div>
-      <div className="w-80 h-20 flex items-center justify-center bg-gray-800 text-white mt-10">
-        <ProjectImages images={activeProject.images} />
+      <div className=" flex items-center justify-center text-white mt-10">
+        <div className="grid grid-cols-2 gap-4 ">
+          {activeProject.images.map((image, index) => (
+            <Image
+              key={index}
+              src={image}
+              alt={`Imagem ${index + 1}`}
+              className="rounded-md w-[300px] h-[200px]	"
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
