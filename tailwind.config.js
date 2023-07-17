@@ -12,6 +12,10 @@ module.exports = {
           500: '#1C1B1B',
           700: '#171717',
         },
+        purple: {
+          500: '#a855f7',
+          700: '#7827B6'
+        },
         CinzaText: '#A3AABB2',
       },
       backgroundImage: {
