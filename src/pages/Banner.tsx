@@ -2,7 +2,7 @@ import bannerImg from "../assets/banner-img.png";
 import Image from 'next/image';
 import { AiFillGithub } from 'react-icons/ai';
 import { AiFillLinkedin } from 'react-icons/ai';
-import ArrowRight from '../assets/arrow-right.svg'
+
 
 const Banner = () => {
   return (
@@ -16,9 +16,9 @@ const Banner = () => {
           <h1 className="text-4xl font-bold text-white">Riany Mello</h1>
           <p className="text-lg font-normal text-gray-400 mb-4">Front-end Developer</p>
           <div className="flex">
-            <AiFillGithub className="text-gray-400 text-3xl transition-all duration-300" />
-            <div className="w-6"></div>
-            <AiFillLinkedin className="text-gray-400 text-3xl transition-all duration-300" />
+          <AiFillGithub className="text-gray-400 text-3xl transition-all duration-300 hover:text-gray-200" />
+          <div className="w-6"></div>
+          <AiFillLinkedin className="text-gray-400 text-3xl transition-all duration-300 hover:text-gray-200" />
           </div>
         </div>
       </div>
@@ -44,13 +44,14 @@ const Banner = () => {
         </div>
 
         <div className="flex flex-row justify-between">
-          <a href="https://github.com/rianymello" target="_blank" rel="noopener noreferrer" className="bg-purple-500 hover:bg-purple-700 text-gray-900 py-3.5 px-12 rounded-md font-normal transition-all duration-300">
+          <a href="https://github.com/rianymello" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center w-full mr-2.5 bg-purple-500 hover:bg-purple-700 text-gray-900 py-3.5 px-12 rounded-md font-normal transition-all duration-300">
             See my Projects
           </a>
-          <a href="#Projects" className="bg-fundo-500 border-2 border-transparent hover:border-purple-500 text-gray-400 py-3.5 px-12 rounded-md font-normal transition-all duration-300">
+          <a href="https://github.com/rianymello" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center w-full ml-2.5 bg-fundo-500 hover:bg-purple-700 text-gray-400 py-3.5 px-12 rounded-md font-normal transition-all duration-300">
             Contact me
           </a>
         </div>
+
       </div>
     </div>
   );
