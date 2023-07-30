@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
+import ModalSkills from './ModalSkills'
 
 import cssIcon from '../assets/css-icon.png';
 import figmaIcon from '../assets/figma-icon.png';
@@ -14,6 +15,8 @@ import trelloIcon from '../assets/trello-icon.png';
 import typescriptIcon from '../assets/typescript-icon.png';
 import rigthArrow from '../assets/rigth-arrow.png';
 import leftArrow from '../assets/left-arrow.png';
+
+
 
 const Skills = () => {
   const carouselItems = [
@@ -32,6 +35,7 @@ const Skills = () => {
 
   const numVisibleItems = 4;
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [showModal, setShowModal] = useState(false);
 
   const handlePrevClick = () => {
     setCurrentIndex(prevIndex =>
@@ -45,16 +49,28 @@ const Skills = () => {
     );
   };
 
+  const openModal = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
   return (
-    <div className='mt-20'>
-    <div className="text-gray-400 text-xl flex justify-center">
-        <h1>Skills</h1>
+    <div className='mt-20 max-w-[600px] mx-auto'>
+    <div className="flex justify-evenly mb-4">
+      <h2 className='text-gray-400 mr-12 text-xl'>Skills</h2>
+      <a className='text-purple-500 hover:text-purple-700 ml-12 text-lg' onClick={() => setShowModal(true)}>See all</a>
+      {showModal && <ModalSkills closeModal={closeModal} />}
     </div>
+   
+    
     <div className="flex justify-center items-center space-x-4">
       <button className="text-gray-500" onClick={handlePrevClick}>
-      <Image src={leftArrow} alt='seta da esquerda' width={20} height={20} />
+        <Image src={leftArrow} alt='seta da esquerda' width={20} height={20} />
       </button>
-      <div className="flex overflow-hidden space-x-4">
+      <div className="flex overflow-hidden space-x-4 ">
         {carouselItems.slice(currentIndex, currentIndex + numVisibleItems).map(item => (
           <div
             key={item.id}
@@ -66,11 +82,15 @@ const Skills = () => {
         ))}
       </div>
       <button className="text-gray-500" onClick={handleNextClick}>
-      <Image src={rigthArrow} alt='seta da direita' width={20} height={20} />
+        <Image src={rigthArrow} alt='seta da direita' width={20} height={20} />
       </button>
     </div>
-    </div>
+
+   
+  </div>
+
   );
 };
+
 
 export default Skills;
