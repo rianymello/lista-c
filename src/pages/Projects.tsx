@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
-import Project1 from '../assets/projeto1.jpg';
-import Project2 from '../assets/projeto2.jpg';
-import Project3 from '../assets/projeto3.jpg';
-import Project4 from '../assets/projeto4.jpg';
-import Project5 from '../assets/projeto5.jpg';
-import Project6 from '../assets/projeto6.jpg';
+import Project1 from '../assets/projeto1.png';
+import Project2 from '../assets/projeto2.png';
+import Project3 from '../assets/projeto3.png';
+import Project4 from '../assets/projeto4.png';
+import Project5 from '../assets/projeto5.png';
+import Project6 from '../assets/projeto6.png';
+import Project7 from '../assets/projeto7.png';
+import Project8 from '../assets/projeto8.png';
 
 const Button = ({ label, active, onClick }) => {
   const buttonClasses = active
@@ -31,18 +33,14 @@ const Projects = () => {
     Project2,
     Project3,
     Project4,
-    Project5,
-    Project6,
 
   ];
 
   const project2Images = [
-    Project6,
     Project5,
-    Project4,
-    Project3,
-    Project2,
-    Project1,
+    Project6,
+    Project7,
+    Project8,
 
   ];
 
@@ -80,7 +78,7 @@ const Projects = () => {
               key={index}
               src={image}
               alt={`Imagem ${index + 1}`}
-              className="rounded-md w-[300px] h-[200px]	"
+              className="rounded-md w-[300px] h-[200px]	object-cover"
             />
           ))}
         </div>
