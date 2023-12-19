@@ -1,15 +1,16 @@
-import Banner from './Banner';
-import Skills from './Skills';
-import Projects from './Projects';
-import Footer from './Footer';
+import Image from "next/image";
+import Croco from "../assets/crocodilodemo.png"
 
 const Home = () => {
   return (
     <div>
-      <Banner />
-      <Skills />
-      <Projects />
-      <Footer />
+   
+   <Image
+      src={Croco}
+      alt="Minha Imagem"
+      width={100}
+      height={70}
+   />
     </div>
   );
 }
