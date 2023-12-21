@@ -7,7 +7,7 @@ const Home = () => {
    
    <Image
       src={Croco}
-      alt="Minha Imagem"
+      alt="Crocodilo"
       width={100}
       height={70}
    />
