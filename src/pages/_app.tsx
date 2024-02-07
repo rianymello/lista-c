@@ -1,5 +1,5 @@
 import '../styles/global.css';
-import Home from './Index';
+import Home from './banner';
 
 const App = () => {
   return (
