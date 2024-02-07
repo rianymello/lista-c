@@ -2,8 +2,7 @@
 const Home = () => {
   return (
     <div>
-   jose
-    kskskskskskskskskskskskksksksssk
+   <h3>Lista C</h3>
     </div>
   );
 }
