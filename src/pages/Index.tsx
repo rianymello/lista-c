@@ -4,7 +4,7 @@ import Croco from "../assets/crocodilodemo.png"
 const Home = () => {
   return (
     <div>
-   
+   jose
    <Image
       src={Croco}
       alt="Crocodilo"
